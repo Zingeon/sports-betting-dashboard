@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/dashboard-service/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/dashboard-service/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/dashboard-service",
+  "projects": {
+    "bets-service": {
+      "type": "application",
+      "root": "apps/bets-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/bets-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bets-service/tsconfig.app.json"
+      }
+    },
+    "dashboard-service": {
+      "type": "application",
+      "root": "apps/dashboard-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/dashboard-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/dashboard-service/tsconfig.app.json"
+      }
+    },
+    "odds-service": {
+      "type": "application",
+      "root": "apps/odds-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/odds-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/odds-service/tsconfig.app.json"
+      }
+    }
+  }
+}
